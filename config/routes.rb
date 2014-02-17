@@ -54,4 +54,5 @@ Reader::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root 'news_reader#news'
 end
