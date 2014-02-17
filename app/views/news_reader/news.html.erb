@@ -1,2 +1,5 @@
 <h1>NewsReader#news</h1>
 <p>This is the news reader application</p>
+<%@articles.each do |article|%>
+	<a href="<%=article.url%>"><%=article.title%></a> <br />
+<%end%>
