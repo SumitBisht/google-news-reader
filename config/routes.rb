@@ -1,4 +1,5 @@
 Reader::Application.routes.draw do
+  get "news_reader/news"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
