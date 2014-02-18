@@ -9,7 +9,7 @@ class NewsReaderController < ApplicationController
     content.each do |news|
       text = news.content
       url = news.children[0].attributes["url"].value
-      @articles.push News.create(:title=>text, :url=>url)
+      @articles.push News.find_or_create_by(title:text, url:url)
     end
   end
 end
