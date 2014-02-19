@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample application using rails that performs webscraping on the news.google.com domain to fetch the top news articles together with their urls to provide a cusom news aggregator. It uses nokogiri to parse the contents of the page. Specifically, the '.esc-lead-article-title' class that contains the lead title of the news.
+It also saves the information into the database for fetching the information in future and also provides the saved news articles directly from another path.
+It is deployed on heroku and can be accessed via:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://google-news-parser.herokuapp.com/
+the older news which are saved in the database is present as:
+http://google-news-parser.herokuapp.com/news_reader/oldnews
