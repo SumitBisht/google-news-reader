@@ -1,5 +1,6 @@
 Reader::Application.routes.draw do
   get "news_reader/news"
+  get 'news_reader/oldnews', to: 'news_reader#older_news'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,4 +56,5 @@ Reader::Application.routes.draw do
   #     resources :products
   #   end
   root 'news_reader#news'
+
 end

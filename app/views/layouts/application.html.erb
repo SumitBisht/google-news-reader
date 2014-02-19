@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <%= yield %>
+  <p>Fetched <%=@articles.size%> items.</p>
+  <table>
+	<th>News Article</th>
+	<th>Updated</th>
+	<th>Update Time</th>
+    <%@articles.each do |article|%>
+	<tr>
+	<td><a href="<%=article.url%>"><%=article.title%></a></td>
+	<td><%if(article.created_at != article.updated_at)%>Updated<%else%>Original<%end%></td>
+	<td><%=article.updated_at%></td>
+	</tr>
+    <%end%>
+  </table>
 
 </body>
 </html>

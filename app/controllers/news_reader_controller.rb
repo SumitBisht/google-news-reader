@@ -12,4 +12,7 @@ class NewsReaderController < ApplicationController
       @articles.push News.find_or_create_by(title:text, url:url)
     end
   end
+  def older_news
+  	@articles = News.all()
+  end
 end
